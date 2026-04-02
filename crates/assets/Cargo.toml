@@ -26,3 +26,9 @@ rust-embed = { version = "8.7.2", features = ["interpolate-folder-path", "includ
 reqwest = { workspace = true }
 wasm-bindgen = "0.2"
 wasm-bindgen-futures = "0.4"
+
+# eigen branch: self-contained lints (no workspace inheritance)
+[lints.clippy]
+expect_used = "allow"
+unwrap_used = "allow"
+todo = "warn"

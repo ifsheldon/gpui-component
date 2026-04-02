@@ -9,8 +9,13 @@ edition.workspace = true
 [lib]
 proc-macro = true
 
-[lints]
-workspace = true
+# eigen branch: use self-contained lints instead of workspace inheritance,
+# so this crate can be compiled as a member of any workspace without
+# inheriting strict host-project lint policies.
+[lints.clippy]
+expect_used = "allow"
+unwrap_used = "allow"
+todo = "warn"
 
 [dependencies]
 proc-macro2 = "1.0"

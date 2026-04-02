@@ -151,5 +151,8 @@ core-text = "=21.0.0"
 gpui = { workspace = true, features = ["test-support"] }
 indoc = "2"
 
-[lints]
-workspace = true
+# eigen branch: self-contained lints (no workspace inheritance)
+[lints.clippy]
+expect_used = "allow"
+unwrap_used = "allow"
+todo = "warn"
